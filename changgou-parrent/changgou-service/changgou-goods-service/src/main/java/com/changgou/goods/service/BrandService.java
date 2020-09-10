@@ -1,7 +1,6 @@
 package com.changgou.goods.service;
 
 import com.changgou.pojo.Brand;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -18,4 +17,9 @@ public interface BrandService {
      * @return
      */
     List<Brand> findAll();
+
+    /**
+     * 更加id查询
+     */
+    Brand findById(Integer id);
 }
