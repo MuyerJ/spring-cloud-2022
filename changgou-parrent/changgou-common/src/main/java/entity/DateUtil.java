@@ -7,12 +7,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/***
- *
- * @Author:传智播客
- * @Description:itheima
- *
- ****/
 public class DateUtil {
 
     //时间格式

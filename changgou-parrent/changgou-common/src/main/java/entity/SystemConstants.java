@@ -1,13 +1,5 @@
 package entity;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package entity *
- * @since 1.0
- */
 public class SystemConstants {
     /**
      * 秒杀商品存储到前缀的KEY

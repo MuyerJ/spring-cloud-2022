@@ -10,14 +10,6 @@ import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
 import java.util.Date;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package entity *
- * @since 1.0
- */
 public class JwtUtil {
     //有效期为
     public static final Long JWT_TTL = 3600000L;// 60 * 60 *1000  一个小时
