@@ -4,6 +4,9 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 import java.io.Serializable;
 
+/**
+ * MQ相应信息的封装
+ */
 public class Message implements Serializable{
 
     //执行的操作  1：增加，2：修改,3：删除
