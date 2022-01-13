@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: payment-service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource        #数据源
+    driver-class-name: com.mysql.jdbc.Driver            #mysql驱动
+    url: jdbc:mysql://www.51sou.top:3306/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.yejiang.cloud.entities    # 所有Entity别名类所在包
