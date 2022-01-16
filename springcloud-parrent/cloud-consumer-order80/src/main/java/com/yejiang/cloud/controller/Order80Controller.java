@@ -16,17 +16,18 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/consumer")
 public class Order80Controller {
 
-    public String PAYMENT8001_BASE_URL = "http://localhost:8001";
+//    public String PAYMENT8001_BASE_URL = "http://localhost:8001";
+    public String PAYMENT_BASE_URL = "http://PAYMENT-SERVICE";
     @Autowired
     private RestTemplate restTemplate;
 
     @GetMapping("/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(PAYMENT8001_BASE_URL + "/payment/get/" + id, CommonResult.class, id);
+        return restTemplate.getForObject(PAYMENT_BASE_URL + "/payment/get/" + id, CommonResult.class, id);
     }
 
     @PostMapping("/payment/add")
     public CommonResult addPayment(Payment payment) {
-        return restTemplate.postForObject(PAYMENT8001_BASE_URL + "/payment/insert", payment, CommonResult.class);
+        return restTemplate.postForObject(PAYMENT_BASE_URL + "/payment/insert", payment, CommonResult.class);
     }
 }
