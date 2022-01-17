@@ -1,0 +1,14 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: cloud-provideZK-payment
+  cloud:
+    zookeeper:
+      connect-string: www.51sou.top:2181
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource        #数据源
+    driver-class-name: com.mysql.jdbc.Driver            #mysql驱动
+    url: jdbc:mysql://www.51sou.top:3306/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
