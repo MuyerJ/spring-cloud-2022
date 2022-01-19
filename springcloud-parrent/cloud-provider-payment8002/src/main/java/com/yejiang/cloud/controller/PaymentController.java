@@ -39,7 +39,7 @@ public class PaymentController {
     public CommonResult getById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getById(id);
         log.info("payment get|port = {} ---- | {} ", port, payment);
-        return Objects.nonNull(payment) ? new CommonResult(200, "查询成功", payment) :
+        return Objects.nonNull(payment) ? new CommonResult(200, "查询成功" + port, payment) :
                 new CommonResult(400, "没有对应的记录", null);
     }
 }
