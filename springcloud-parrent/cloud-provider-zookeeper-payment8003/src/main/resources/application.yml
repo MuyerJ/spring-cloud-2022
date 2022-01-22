@@ -2,7 +2,7 @@ server:
   port: 8003
 spring:
   application:
-    name: cloud-provideZK-payment
+    name: cloud-provider-zookeeper-payment8003
   cloud:
     zookeeper:
       connect-string: www.51sou.top:2181
