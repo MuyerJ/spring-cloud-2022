@@ -28,15 +28,15 @@ public class FeignHystrixController {
     }
 
     @GetMapping("/consumer/hystrix/timeout/{id}")
-    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOut_fallback", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
-    })
+//    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOut_fallback", commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+//    })
     String paymentInfo_TimeOut(@PathVariable("id") Integer id) {
         return paymentFeign.paymentInfo_TimeOut(id);
     }
 
 
-    String paymentInfo_TimeOut_fallback(@PathVariable("id") Integer id) {
-        return "80端口服务 熔断";
-    }
+//    String paymentInfo_TimeOut_fallback(@PathVariable("id") Integer id) {
+//        return "80端口服务 熔断";
+//    }
 }
