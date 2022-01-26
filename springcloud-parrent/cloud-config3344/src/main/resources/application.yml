@@ -8,10 +8,11 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:MuyerJ/spring-cloud-2022.git #GitHub上面的git仓库名字
+          uri: https://github.com/MuyerJ/spring-cloud-2022.git #GitHub上面的git仓库名字
           ####搜索目录
-          search-paths:
-          - config/
+          search-paths: springcloud-parrent
+          username: MuyerJ
+          password: 1140549742yj
       ####读取分支
       label: master
 
