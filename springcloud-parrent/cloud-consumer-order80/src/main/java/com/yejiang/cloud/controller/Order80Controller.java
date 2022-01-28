@@ -30,4 +30,10 @@ public class Order80Controller {
     public CommonResult addPayment(Payment payment) {
         return restTemplate.postForObject(PAYMENT_BASE_URL + "/payment/insert", payment, CommonResult.class);
     }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return restTemplate.getForObject(PAYMENT_BASE_URL + "/payment/zipkin/", String.class);
+    }
+
 }
