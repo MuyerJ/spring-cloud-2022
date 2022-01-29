@@ -6,14 +6,15 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * Description: 
- * date: 2022/1/29 14:57
+ * date: 2022/1/29 15:27
  * @author YeJiang
  * @version
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class AlibabaPayment9001 {
+public class NacosConfig {
+
     public static void main(String[] args) {
-        SpringApplication.run(AlibabaPayment9001.class, args);
+        SpringApplication.run(NacosConfig.class, args);
     }
 }
