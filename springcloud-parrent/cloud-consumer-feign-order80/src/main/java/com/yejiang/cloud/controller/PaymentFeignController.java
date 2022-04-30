@@ -20,7 +20,9 @@ public class PaymentFeignController {
 
     @GetMapping(value = "/paymentFeign/get/{id}")
     CommonResult getById(@PathVariable("id") Long id) {
-        return paymentFeign.getById(id);
+        CommonResult info = paymentFeign.getById(id);
+        System.out.println(info);
+        return info;
     }
 
     @GetMapping(value = "/paymentFeign/timeout")

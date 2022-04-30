@@ -26,6 +26,8 @@
         <module>cloud-alibaba-consumer-nacos-order80</module>
         <module>cloud-alibaba-config3377</module>
         <module>cloud-alibaba-sentinel-service8401</module>
+        <module>cloud-provider-sample8001</module>
+        <module>cloud-provider-sample8002</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
