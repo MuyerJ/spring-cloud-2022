@@ -2,6 +2,7 @@ spring:
   application:
     name: provider
 
+
 eureka:
   instance:
     #默认 主机名：服务名称：服务端口
@@ -9,5 +10,17 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+    healthcheck:
+      enabled: true
 server:
   port: 8001
+
+#打开其他端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true

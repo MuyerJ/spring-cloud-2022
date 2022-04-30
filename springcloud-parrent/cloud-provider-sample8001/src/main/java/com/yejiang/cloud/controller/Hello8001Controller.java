@@ -2,6 +2,7 @@ package com.yejiang.cloud.controller;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
+import com.yejiang.cloud.service.HealthStatusService;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -26,6 +27,15 @@ public class Hello8001Controller {
     public DiscoveryClient discoveryClient;
     @Autowired
     public EurekaClient eurekaClient;
+    @Autowired
+    private HealthStatusService healthStatusService;
+
+    @GetMapping("/click/{status}")
+    public String click(@PathVariable(value = "status") int status) {
+        healthStatusService.setStatus(status == 1);
+        healthStatusService.health();
+        return "ok";
+    }
 
     @GetMapping("/hello")
     public String hello() {
@@ -58,11 +68,11 @@ public class Hello8001Controller {
         //根据instanceId找一个
         //List<InstanceInfo> instances = eurekaClient.getInstancesById(pathId);
         //根据application找一堆
-        List<InstanceInfo> instances = eurekaClient.getInstancesByVipAddress(pathId,false);
+        List<InstanceInfo> instances = eurekaClient.getInstancesByVipAddress(pathId, false);
         if (instances.size() > 0) {
             InstanceInfo instanceInfo = instances.get(0);
             if (instanceInfo.getStatus() == InstanceInfo.InstanceStatus.UP) {
-                String url = "http://" + instanceInfo.getIPAddr() + ":" + instanceInfo.getPort()+"/hello";
+                String url = "http://" + instanceInfo.getIPAddr() + ":" + instanceInfo.getPort() + "/hello";
                 RestTemplate restTemplate = new RestTemplate();
                 String resp = restTemplate.getForObject(url, String.class);
                 return "resp:" + resp;
