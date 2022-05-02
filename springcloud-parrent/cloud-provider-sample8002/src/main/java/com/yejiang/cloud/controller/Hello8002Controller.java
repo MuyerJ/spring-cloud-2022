@@ -17,6 +17,17 @@ public class Hello8002Controller {
         return "hello 8002";
     }
 
+    @GetMapping("/sleep")
+    public String sleep() {
+        System.out.println("8002 sleep");
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "8002 sleep";
+    }
+
     @GetMapping("/person")
     public Person person() {
         return new Person("1", "yejiang");

@@ -28,6 +28,7 @@
         <module>cloud-alibaba-sentinel-service8401</module>
         <module>cloud-provider-sample8001</module>
         <module>cloud-provider-sample8002</module>
+        <module>cloud-consumer-order81</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

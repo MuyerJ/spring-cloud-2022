@@ -17,4 +17,16 @@ public class Hello8001Controller {
         return "8001 hello";
     }
 
+    @GetMapping("/sleep")
+    public String sleep() {
+        System.out.println("8001 sleep");
+        int i = 1 / 0;
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "8001 sleep";
+    }
+
 }

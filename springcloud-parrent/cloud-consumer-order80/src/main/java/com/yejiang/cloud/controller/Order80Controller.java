@@ -18,6 +18,7 @@ public class Order80Controller {
 
 //    public String PAYMENT8001_BASE_URL = "http://localhost:8001";
     public String PAYMENT_BASE_URL = "http://PAYMENT-SERVICE";
+    public String PROVIDER = "http://provider";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -34,6 +35,12 @@ public class Order80Controller {
     @GetMapping("/payment/zipkin")
     public String paymentZipkin() {
         return restTemplate.getForObject(PAYMENT_BASE_URL + "/payment/zipkin/", String.class);
+    }
+
+
+    @GetMapping("/provider1")
+    public String provider1() {
+        return restTemplate.getForObject(PROVIDER + "/hello", String.class);
     }
 
 }
