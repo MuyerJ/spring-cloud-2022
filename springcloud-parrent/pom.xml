@@ -29,6 +29,8 @@
         <module>cloud-provider-sample8001</module>
         <module>cloud-provider-sample8002</module>
         <module>cloud-consumer-order81</module>
+        <module>cloud-security-csrf</module>
+        <module>cloud-security80</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

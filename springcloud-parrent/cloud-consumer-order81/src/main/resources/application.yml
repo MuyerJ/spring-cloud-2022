@@ -29,6 +29,12 @@ feign:
   hystrix:
     enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 #provider:
 #  ribbon:
 #    listOfServers: localhost:8001,localhost:8002

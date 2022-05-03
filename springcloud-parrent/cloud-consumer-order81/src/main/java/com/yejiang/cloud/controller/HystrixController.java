@@ -18,7 +18,7 @@ public class HystrixController {
     @Autowired
     private HelloProvider helloProvider;
 
-    @GetMapping("/hystrix")
+    @GetMapping("/hystrix1")
     public String hystrix1() {
         return helloProvider.hello();
     }

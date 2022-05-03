@@ -12,6 +12,11 @@
     <artifactId>cloud-consumer-order81</artifactId>
 
     <dependencies>
+        <!--hystrix-dashbord-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
         <!--openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
