@@ -6,3 +6,11 @@ spring:
     user:
       name: yejiang
       password: 123
+  thymeleaf:
+    mode: HTML
+    suffix: .html
+    prefix: classpath:/static/
+    cache: false
+    enabled: true
+    encoding: UTF-8
+

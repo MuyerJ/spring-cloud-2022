@@ -2,6 +2,7 @@ package com.cloud.yejiang.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 /**
  * Description: 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version
  */
 @SpringBootApplication
+@EnableWebSecurity
 public class SecurityMain {
     public static void main(String[] args) {
         SpringApplication.run(SecurityMain.class, args);
