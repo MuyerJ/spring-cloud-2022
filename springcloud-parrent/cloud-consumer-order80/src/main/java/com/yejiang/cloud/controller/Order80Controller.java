@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/consumer")
 public class Order80Controller {
 
-//    public String PAYMENT8001_BASE_URL = "http://localhost:8001";
+    //    public String PAYMENT8001_BASE_URL = "http://localhost:8001";
     public String PAYMENT_BASE_URL = "http://PAYMENT-SERVICE";
     public String PROVIDER = "http://provider";
     @Autowired
