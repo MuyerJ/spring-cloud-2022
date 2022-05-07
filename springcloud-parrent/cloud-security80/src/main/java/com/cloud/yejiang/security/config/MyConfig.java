@@ -28,7 +28,7 @@ import java.io.IOException;
  * @version
  */
 
-@Configuration
+//@Configuration
 public class MyConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
