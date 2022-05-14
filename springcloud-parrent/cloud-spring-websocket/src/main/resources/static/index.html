@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        index
+        <span id="content">
+
+        </span>
+
+        <script>
+            var websocket = null;
+            if ('WebSocket' in window) {
+                websocket = new WebSocket('ws://localhost/webSocket');
+            } else {
+                alert('该浏览器不支持websocket!');
+            }
+
+            websocket.onopen = function (event) {
+                console.log('建立连接');
+            }
+
+            websocket.onclose = function (event) {
+                console.log('连接关闭');
+            }
+
+            websocket.onmessage = function (event) {
+                console.log('收到消息:' + event.data);
+                document.getElementById("content").innerHTML = "你有新的订单 , 订单号：" + event.data;
+            }
+
+            websocket.onerror = function () {
+                alert('websocket通信发生错误！');
+            }
+
+            window.onbeforeunload = function () {
+                websocket.close();
+            }
+
+        </script>
+
+    </body>
+</html>
