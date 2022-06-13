@@ -33,6 +33,7 @@
         <module>cloud-security80</module>
         <module>cloud-spring-statemachine</module>
         <module>cloud-spring-websocket</module>
+        <module>mvc-sse</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

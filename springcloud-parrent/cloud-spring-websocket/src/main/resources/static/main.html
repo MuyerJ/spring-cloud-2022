@@ -99,7 +99,7 @@
                     async: false //同步请求，只有上面好了才会接着下面
                 });
 
-                var ws = new WebSocket("ws://localhost/chat");
+                var ws = new WebSocket("ws://localhost:9988/chat");
                 ws.onopen = function (ev) {
                     $("#username").html("用户：" + username + "<span>在线</span>");
                 };
